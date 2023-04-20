@@ -7,7 +7,11 @@
     ];
     
     if (isset($_POST['itemToAdd'])) {
-        $toDoList[] = $_POST['itemToAdd'];
+        $value = $_POST['itemToAdd']['value'] === "true" ? true : false;
+        $toDoList[] = [
+            'action' => $_POST['itemToAdd']['action'],
+            "value" => $value
+        ];
     }
     
     header('Content-Type: application/json');
