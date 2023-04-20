@@ -1,9 +1,9 @@
 <?php
     $toDoList = [
-        "Fare la Spesa",
-        "Cucinare",
-        "Studiare",
-        "Dormire"
+        ["action" => "Fare la Spesa", "value" => true],
+        ["action" => "Cucinare", "value" => false],
+        ["action" => "Studiare", "value" => false],
+        ["action" => "Dormire", "value" => false]
     ];
     
     if (isset($_POST['itemToAdd'])) {
