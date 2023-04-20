@@ -16,7 +16,10 @@ createApp({
     },
     addItem() {
         const data = {
-            itemToAdd: this.toDoItem
+            itemToAdd: {
+                            "action": this.toDoItem,
+                            "value": false
+                        }
         };
 
 
@@ -25,6 +28,7 @@ createApp({
             headers: { 'Content-Type': 'multipart/form-data'}
         }
         ).then(response => {
+            console.log(response);
             this.toDoList = response.data;
             this.toDoItem = '';
         });

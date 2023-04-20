@@ -3,7 +3,7 @@
         ["action" => "Fare la Spesa", "value" => true],
         ["action" => "Cucinare", "value" => false],
         ["action" => "Studiare", "value" => false],
-        ["action" => "Dormire", "value" => false]
+        ["action" => "Dormire", "value" => false],
     ];
     
     if (isset($_POST['itemToAdd'])) {
