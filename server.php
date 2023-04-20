@@ -5,11 +5,11 @@
         "Studiare",
         "Dormire"
     ];
-    /*
-    if (isset($_POST['list'])) {
-        $toDoList[] = $_POST['list'];
+    
+    if (isset($_POST['itemToAdd'])) {
+        $toDoList[] = $_POST['itemToAdd'];
     }
-    */
+    
     header('Content-Type: application/json');
     
     echo json_encode($toDoList);
