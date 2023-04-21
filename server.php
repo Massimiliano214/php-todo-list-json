@@ -26,10 +26,3 @@
     echo json_encode($toDoList);
 ?>
 
-<!--
-$toDoList = [
-        ["action" => "Fare la Spesa", "value" => true],
-        ["action" => "Cucinare", "value" => false],
-        ["action" => "Studiare", "value" => false],
-        ["action" => "Dormire", "value" => false],
-    ];

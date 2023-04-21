@@ -11,7 +11,7 @@ createApp({
     reader() {
         axios.get("server.php")
         .then(response => {
-            this.toDoList = response.data
+            this.toDoList = response.data;
         })
     },
     addItem() {
