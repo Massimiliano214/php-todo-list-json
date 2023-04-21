@@ -28,7 +28,6 @@ createApp({
             headers: { 'Content-Type': 'multipart/form-data'}
         }
         ).then(response => {
-            console.log(response);
             this.toDoList = response.data;
             this.toDoItem = '';
         });
@@ -44,11 +43,25 @@ createApp({
             headers: { 'Content-Type': 'multipart/form-data'}
         }
         ).then(response => {
-            console.log(response);
             this.toDoList = response.data;
             this.toDoItem = '';
         });
     },
+    deleateAction(index) {
+      const data = {
+        indexValueToDeleate: index
+    };
+
+
+    axios.post("server.php", data,
+    {
+        headers: { 'Content-Type': 'multipart/form-data'}
+    }
+    ).then(response => {
+        this.toDoList = response.data;
+        this.toDoItem = '';
+    });
+    }
   },
   mounted() {
     this.reader();

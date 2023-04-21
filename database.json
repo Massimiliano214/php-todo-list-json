@@ -1,1 +1,1 @@
-[{"action":"lavare la macchina","value":false},{"action":"studiare","value":true},{"action":"fare i compiti","value":false}]
+{"0":{"action":"lavare la macchina","value":true},"1":{"action":"studiare","value":false},"2":{"action":"fare i compiti","value":false},"3":{"action":"dds","value":true},"5":{"value":true}}
