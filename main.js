@@ -32,9 +32,34 @@ createApp({
             this.toDoList = response.data;
             this.toDoItem = '';
         });
-    }
+    },
+    updValue(index) {
+      const data = {
+            indexValue: index
+        };
+
+
+        axios.post("server.php", data,
+        {
+            headers: { 'Content-Type': 'multipart/form-data'}
+        }
+        ).then(response => {
+            console.log(response);
+            this.toDoList = response.data;
+            this.toDoItem = '';
+        });
+    },
   },
   mounted() {
     this.reader();
   }
 }).mount('#app')
+
+
+/*
+if (this.toDoList[index].value == true) {
+  this.toDoList[index].value = false;
+} else {
+  this.toDoList[index].value = true;
+}
+*/

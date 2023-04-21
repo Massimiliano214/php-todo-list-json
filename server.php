@@ -19,10 +19,25 @@
 
         $myString = json_encode($toDoList);
         file_put_contents('database.json', $myString);
+
+        
+    }
+    if (isset($_POST['indexValue'])) {
+        if($toDoList[$_POST['indexValue']]["value"] == false) {
+            $toDoList[$_POST['indexValue']]["value"] = true;
+        } else {
+            $toDoList[$_POST['indexValue']]["value"] = false;
+        }
+        
+
+        $myString = json_encode($toDoList);
+        file_put_contents('database.json', $myString);
     }
     
     header('Content-Type: application/json');
     
     echo json_encode($toDoList);
+
+
 ?>
 
