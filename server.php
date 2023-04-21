@@ -1,11 +1,12 @@
 <?php
     
-    $toDoList = [
-        ["action" => "Fare la Spesa", "value" => true],
-        ["action" => "Cucinare", "value" => false],
-        ["action" => "Studiare", "value" => false],
-        ["action" => "Dormire", "value" => false],
-    ];
+    if (file_exists('database.json')) {
+        $string = file_get_contents('database.json');
+        $toDoList = json_decode($string, true);
+    } else {
+        $toDoList = [];
+    }
+    
     
     
     if (isset($_POST['itemToAdd'])) {
@@ -26,9 +27,9 @@
 ?>
 
 <!--
-if (file_exists('database.json')) {
-        $string = file_get_contents('database.json');
-        $toDoList = json_decode($string, true);
-    } else {
-        $toDoList = [];
-    }
+$toDoList = [
+        ["action" => "Fare la Spesa", "value" => true],
+        ["action" => "Cucinare", "value" => false],
+        ["action" => "Studiare", "value" => false],
+        ["action" => "Dormire", "value" => false],
+    ];
