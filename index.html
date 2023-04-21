@@ -13,23 +13,26 @@
 <body>
     <main>
     <div id="app">
-        <div class="container py-5">
-            <h1>To Do List v2</h1>
-            <ul class="list-group">
+        <div class="container py-5 text-center">
+            <h1 class="py-5">To Do List v2</h1>
+            <div class="d-flex justify-content-center">
+                <ul class="list-group w-75">
 
-                <li v-for="(toDo, index) in toDoList" class="list-group-item d-flex justify-content-between" >
-
-                    <span @click="updValue(index)" class="flex-grow-1" :class="toDo.value ? 'dashed':''">{{ toDo.action }}</span>
-
-                    <i @click="deleateAction(index)" class="fa-solid fa-trash"></i>
-                
-                </li>
-
-
-            </ul>
+                    <li v-for="(toDo, index) in toDoList" class="list-group-item d-flex justify-content-between" >
+    
+                        <span @click="updValue(index)" class="flex-grow-1" :class="toDo.value ? 'dashed':''">{{ toDo.action }}</span>
+    
+                        <i @click="deleateAction(index)" class="fa-solid fa-trash"></i>
+                    
+                    </li>
+    
+    
+                </ul>
+            </div>
+            
 
             <div class="text-center">
-                <input class="my-5 text-center mx-1 w-75" type="text" @keyup.enter="addItem" v-model="toDoItem">
+                <input class="my-5 text-center mx-1 w-50" type="text" @keyup.enter="addItem" v-model="toDoItem">
                 <button type="submit" class="btn btn-primary" @click="addItem">Aggiungi</button>
             </div>
            
