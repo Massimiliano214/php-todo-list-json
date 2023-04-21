@@ -35,7 +35,7 @@
     }
     if (isset($_POST['indexValueToDeleate'])) {
         $secondValue = $_POST['indexValueToDeleate'];
-        $toDoList = array_slice($toDoList, [$_POST['indexValueToDeleate']]);
+        $toDoList = array_slice($toDoList, $secondValue);
         
 
         $myString = json_encode($toDoList);
