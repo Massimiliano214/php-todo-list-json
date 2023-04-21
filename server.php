@@ -34,8 +34,9 @@
         file_put_contents('database.json', $myString);
     }
     if (isset($_POST['indexValueToDeleate'])) {
-        $secondValue = $_POST['indexValueToDeleate'];
-        $toDoList = array_slice($toDoList, $secondValue);
+        $firstValue = $_POST['indexValueToDeleate'];
+        $secondValue = -1;
+        $toDoList = array_splice($toDoList, $firstValue, $secondValue);
         
 
         $myString = json_encode($toDoList);
